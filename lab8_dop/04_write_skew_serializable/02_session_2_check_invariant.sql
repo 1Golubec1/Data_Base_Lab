@@ -1,0 +1,7 @@
+BEGIN;
+SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
+
+SELECT COUNT(*) AS active_orders
+FROM taxi_order
+WHERE id IN (800003, 800004)
+  AND status IN ('accepted', 'way');

@@ -1,0 +1,6 @@
+SELECT COUNT(*) AS waiting_orders
+FROM taxi_order
+WHERE id BETWEEN 800001 AND 800005
+  AND status = 'waiting';
+
+COMMIT;
